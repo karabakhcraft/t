@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - KarabahCraft</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <nav>
+        <div class="logo">KarabahCraft Admin</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Ana Səhifə</a></li>
+            <li><button id="logout-btn" class="btn-small">Çıxış</button></li>
+        </ul>
+    </nav>
+
+    <div class="admin-dashboard">
+        <aside class="admin-sidebar">
+            <button onclick="showTab('server-tab')">Server Ayarları</button>
+            <button onclick="showTab('news-tab')">Xəbərlər</button>
+            <button onclick="showTab('rules-tab')">Qaydalar</button>
+            <button onclick="showTab('faq-tab')">Suallar</button>
+            
+        </aside>
+
+        <main class="admin-main">
+            <section id="server-tab" class="admin-tab active">
+                <h2>Server Ayarları</h2>
+                <form id="server-settings-form">
+                    <div class="input-group">
+                        <label>Server IP</label>
+                        <input type="text" id="set-ip">
+                    </div>
+                    <div class="input-group">
+                        <label>Versiya</label>
+                        <input type="text" id="set-version">
+                    </div>
+                    <div class="input-group">
+                        <label>Discord Linki</label>
+                        <input type="text" id="set-discord">
+                    </div>
+                    <button type="submit" class="btn-primary">Yadda Saxla</button>
+                </form>
+            </section>
+
+            <section id="news-tab" class="admin-tab">
+                <h2>Xəbərləri İdarə Et</h2>
+                <form id="admin-news-form">
+                    <input type="text" id="news-title" placeholder="Başlıq" required>
+                    <textarea id="news-text" placeholder="Xəbər mətni" required></textarea>
+                    <button type="submit" class="btn-primary">Əlavə Et</button>
+                </form>
+                <div id="admin-news-list" class="admin-list"></div>
+            </section>
+
+            <section id="rules-tab" class="admin-tab">
+                <h2>Qaydaları İdarə Et</h2>
+                <form id="admin-rules-form">
+                    <input type="text" id="rule-title" placeholder="Qayda Başlığı" required>
+                    <textarea id="rule-desc" placeholder="Qayda İzahı" required></textarea>
+                    <button type="submit" class="btn-primary">Əlavə Et</button>
+                </form>
+                <div id="admin-rules-list" class="admin-list"></div>
+            </section>
+
+            <section id="faq-tab" class="admin-tab">
+                <h2>Sualları İdarə Et</h2>
+                <form id="admin-faq-form">
+                    <input type="text" id="faq-q" placeholder="Sual" required>
+                    <textarea id="faq-a" placeholder="Cavab" required></textarea>
+                    <button type="submit" class="btn-primary">Əlavə Et</button>
+                </form>
+                <div id="admin-faq-list" class="admin-list"></div>
+            </section>
+
+            
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qeydiyyat - KarabahCraft</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <nav>
+        <div class="logo">KarabahCraft</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Ana Səhifə</a></li>
+        </ul>
+    </nav>
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>Qeydiyyat</h2>
+            <form id="register-form">
+                <div class="input-group">
+                    <label>İstifadəçi Adı</label>
+                    <input type="text" id="reg-username" required>
+                </div>
+                <div class="input-group">
+                    <label>E-poçt</label>
+                    <input type="email" id="reg-email" required>
+                </div>
+                <div class="input-group">
+                    <label>Şifrə</label>
+                    <input type="password" id="reg-password" required>
+                </div>
+                <button type="submit" class="btn-primary">Qeydiyyatdan Keç</button>
+            </form>
+            <p style="margin-top: 15px; text-align: center;">Artıq hesabınız var? <a href="login.html">Giriş et</a></p>
+            <p id="reg-status" class="error-msg"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KarabahCraft - Minecraft SMP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <div id="loader">
+        <div class="minecraft-loader">
+            <div class="cube"></div>
+            <p>KarabahCraft Yüklənir...</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html" class="logo">KarabahCraft</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-container" id="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Səhifə</a></li>
+                <li><a href="#market">Market</a></li>
+                <li><a href="rules.html">Qaydalar</a></li>
+                <li><a href="faq.html">Suallar</a></li>
+            </ul>
+            <div class="auth-nav" id="auth-nav">
+                <a href="login.html" class="btn-small">Giriş</a>
+                <a href="register.html" class="btn-small">Qeydiyyat</a>
+            </div>
+            <div class="controls">
+                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+                <button id="music-toggle"><i class="fas fa-music"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="news-ticker">
+        <div class="ticker-content" id="news-ticker-content">
+            <span>KarabahCraft-a xoş gəlmisiniz!</span>
+        </div>
+    </div>
+
+    <header class="hero">
+        <h1 class="glitch" data-text="KarabahCraft">KarabahCraft</h1>
+        <p id="hero-subtitle">Ən yaxşı Minecraft SMP təcrübəsi</p>
+        <div class="server-info">
+            <div class="info-box">
+                <h3>Server IP</h3>
+                <p id="display-ip">Yüklənir...</p>
+            </div>
+            <div class="info-box">
+                <h3>Versiya</h3>
+                <p id="display-version">Yüklənir...</p>
+            </div>
+        </div>
+        <div class="hero-btns">
+            <button id="play-now" class="btn-primary">İndi Oyna</button>
+            <a href="#" id="discord-link" target="_blank" class="btn-secondary"><i class="fab fa-discord"></i> Discord</a>
+        </div>
+        <div class="player-count">
+            Onlayn Oyunçular: <span id="online-count">...</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="news-section content-container">
+            <h2>Son Xəbərlər</h2>
+            <div id="news-container" class="news-grid">
+                <!-- Dynamic News -->
+            </div>
+        </section>
+
+        <section id="market" class="market-section content-container">
+            <h2>Market</h2>
+            <p class="market-intro">Serverdə üstünlük əldə etmək üçün paketləri seçin. Hər bir paket sizə xüsusi imkanlar verir!</p>
+            <div class="market-grid">
+                <div class="market-card">
+                    <div class="card-header">
+                        <i class="fas fa-crown"></i>
+                        <h3>VIP</h3>
+                        <span class="price">3 manat</span>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Xüsusi rəng adı</li>
+                        <li><i class="fas fa-check"></i> /home komandası</li>
+                        <li><i class="fas fa-check"></i> Əlavə inventory</li>
+                        <li><i class="fas fa-check"></i> VIP çatında yazma hüququ</li>
+                    </ul>
+                    <button class="btn-market" onclick="buyPackage('VIP')">Satın Al</button>
+                </div>
+
+                <div class="market-card premium">
+                    <div class="card-header">
+                        <i class="fas fa-star"></i>
+                        <h3>VIP+</h3>
+                        <span class="price">6 manat</span>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> VIP-in bütün imkanları</li>
+                        <li><i class="fas fa-check"></i> /tpa komandası</li>
+                        <li><i class="fas fa-check"></i> Xüsusi pet</li>
+                        <li><i class="fas fa-check"></i> Əlavə sağlıq</li>
+                        <li><i class="fas fa-check"></i> Hızlı oyuncu adı rəngləri</li>
+                    </ul>
+                    <button class="btn-market premium-btn" onclick="buyPackage('VIP+')">Satın Al</button>
+                </div>
+
+                <div class="market-card">
+                    <div class="card-header">
+                        <i class="fas fa-hammer"></i>
+                        <h3>Builder Kit</h3>
+                        <span class="price">4 manat</span>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Sınırsız inşaat blokları</li>
+                        <li><i class="fas fa-check"></i> /schematic komandası</li>
+                        <li><i class="fas fa-check"></i> Xüsusi dekorasyon əşyaları</li>
+                        <li><i class="fas fa-check"></i> Builder topluluğuna qoşulma</li>
+                    </ul>
+                    <button class="btn-market" onclick="buyPackage('Builder Kit')">Satın Al</button>
+                </div>
+
+                <div class="market-card">
+                    <div class="card-header">
+                        <i class="fas fa-sword"></i>
+                        <h3>PVP Kit</h3>
+                        <span class="price">4 manat</span>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Xüsusi silahlar</li>
+                        <li><i class="fas fa-check"></i> /kit komandası</li>
+                        <li><i class="fas fa-check"></i> Zırh paketləri</li>
+                        <li><i class="fas fa-check"></i> PVP arenasında əlavə imkanlar</li>
+                    </ul>
+                    <button class="btn-market" onclick="buyPackage('PVP Kit')">Satın Al</button>
+                </div>
+            </div>
+            <div class="market-info">
+                <p><i class="fas fa-info-circle"></i> Paketləri satın almaq üçün aşağıdakı Discord linkində bizə yazın.</p>
+                <a href="#" id="market-discord-link" class="btn-market-discord" target="_blank">
+                    <i class="fab fa-discord"></i> Discord-da Satın Al
+                </a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 KarabahCraft. All rights reserved.</p>
+    </footer>
+
+    <audio id="bg-music" loop>
+        <source src="assets/music/background.mp3" type="audio/mpeg">
+    </audio>
+    <div id="toast" class="toast">IP kopyalandı!</div>
+    <script src="script.js"></script>
+</body>
+</html>
