@@ -1,7 +1,7 @@
 // Default Data
 const defaultData = {
-    server: { ip: "23.88.10.122:25619", version: "1.21+", discord: "https://discord.gg/autUT2vuQn" },
-    news: [{ title: "Xoş Gəlmisiniz!", text: "KarabahCraft artıq onlayndır! Hər kəsi gözləyirik." }],
+    server: { ip: "23.88.10.122:25619", version: "1.21+(Java/bedrock)", discord: "https://discord.gg/autUT2vuQn" },
+    news: [{ title: "Xoş Gəlmisiniz!", text: "KarabakhCraft artıq onlayndır! Hər kəsi gözləyirik." }],
     rules: [
         { title: "Hörmət", desc: "Bütün oyunçulara hörmətlə yanaşın." },
         { title: "Hile Qadağandır", desc: "Hər hansı bir hile və ya üstünlük verən proqram təminatından istifadə qəti qadağandır." },
@@ -22,7 +22,7 @@ const defaultData = {
 };
 
 // State
-let appData = JSON.parse(localStorage.getItem('karabahcraft_data')) || defaultData;
+let appData = JSON.parse(localStorage.getItem('karabakhcraft_data')) || defaultData;
 
 // Force update version and discord if they are old
 if (appData.server.version !== "1.21+" || appData.server.discord !== "https://discord.gg/autUT2vuQn") {
@@ -35,7 +35,7 @@ let currentTheme = localStorage.getItem('theme') || 'dark-mode';
 
 // Save Data
 function saveData() {
-    localStorage.setItem('karabahcraft_data', JSON.stringify(appData));
+    localStorage.setItem('karabakhcraft_data', JSON.stringify(appData));
 }
 
 // Initialize
